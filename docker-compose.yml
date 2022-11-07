@@ -10,5 +10,15 @@ services:
       POSTGRES_DATABASE: bookmark
     networks:
       - thinuradev
+  test-db:
+    image: postgres:13
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DATABASE: bookmark
+    networks:
+      - thinuradev
 networks:
   thinuradev:
